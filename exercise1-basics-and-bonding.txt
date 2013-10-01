@@ -1,0 +1,68 @@
+Basics and Bonding
+-----------------
+
+The aim of this exercise is to familiarise you with setting up and running
+some CASTEP calculations using the Materials Studio interface.
+
+You will run some simple and small CASTEP calculations on canonical examples
+of covalently and ionically bonded materials - silicon and sodium chloride -
+and use the results to study the bonding from an electronic structure perspective.
+
+1.  Start Materials Studio and create a new project. Choose a suitable
+    name such as "Si2".  Import the structure if Si2 from the examples
+    directory (accessed fron File->Import).  Now start the CASTEP
+    interface.  Explore the default choice of options. There is a tab
+    marked "Properties".  Please select the one marked "Population Analysis".
+
+    When you are ready, run CASTEP.  
+
+    This should take a few seconds and produce a readable output file
+    "Si2.castep". Examine this, see what values of parameters CASTEP
+    chose for you.  Find the section of the file which monitors the
+    SCF loop and the approach to convergence.  How many SCF iterations
+    did it need?
+
+2.  The next task is to visualise the electron (charge) density computed
+    by CASTEP.  Re-select your input structure and start the
+    "CASTEP Analysis" tool.   Select the option to analyse electron
+   density.  
+
+   Explore using isosurfaces to visualise and help you understand
+   the shape of the charge density.  You can change the isosurface value, 
+
+   a) Can you explain what you see at an isosurface value of 0.5?
+   b) Can you see any features which might be characteristic of
+      a covalently-bonded crystal.
+   c) Do you notice anything strange about the charge density close to the
+      Si nucleus?   Can you explain this as a consequence of the particular kind
+      of electronic structure calculation you have just performed?
+
+3. Instead of the full charge density, try creating and reading in
+   a charge density difference. Can this help understand the bonding 
+   better than the full density?
+
+7. Repeat the above exercises for sodium chloride instead of silicon.  Run
+   the castep calculation using the NaCl.cell file provided.
+
+   Can you understand (from the NaCl.castep output file) why this 
+   calculation takes much longer to run than silicon?
+
+8. Re-run the sodium shloride example, first checking the
+   "population analysis" option in the CASTEP tool "Properties" tab.
+
+   At the end of the NaCl.castep you will find a block describing a
+   "population analysis", ie which electrons belong to which atoms.
+   Compare this with your silicon calculation. What can you learn about
+   the bonding from this?
+
+9. Prepare and visualise the charge density just as for silicon.
+   
+   Note what similarities and differences you find compared to
+   silicon?  Does this help explain the difference in bond chemistry
+   between silicon and sodium chloride?
+
+   Does this help explain why there are many reasonable empirical
+   potentials for NaCl to be found in the simulation literature, but
+   that finding good potentials for silicon is a very tough challenge?
+
+10. Repeat for a metal, Al.
